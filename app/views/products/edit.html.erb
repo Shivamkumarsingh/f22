@@ -1,0 +1,9 @@
+<%= form_for @product, html: { method: :put } do|product| %>
+	<div class="field">
+	<%= product.label :name %><br />
+	<%=product.text_field :name, autofocus: true %>
+	</div>
+	<div class="action">
+	<%= product.submit "Update"%>
+	</div>
+	<%end%>

@@ -1,0 +1,16 @@
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>SKU_ID</th>
+<th>Price</th>
+</tr>
+<% @products.each do |product| %>
+<tr>
+<td><%= link_to product.name,product_path(product) %></td>
+<td><%= product.description %></td>
+<td><%= product.sku_id %></td>
+<td><%= product.price %></td>
+</tr>
+<% end %>
+</table>
