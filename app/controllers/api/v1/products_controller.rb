@@ -8,7 +8,7 @@ class Api::V1::ProductsController < ApplicationController
 		else
 			format.json { render :json => @product.errors }
 		end
-		#render :json => params
+		
 	end
 	end
 
@@ -16,7 +16,7 @@ class Api::V1::ProductsController < ApplicationController
 	private
 
 	def product_params
-		params.require(:product).permit(:expire_date, :name, :sku_id, :price, :description, tags: [], :categories => [], images: [:img_path])
+		params.require(:product).permit(:expire_date, :name, :sku_id, :price, :description, tags: [], categories: [], images: [:img_path])
 	end
 
 end
