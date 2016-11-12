@@ -4,6 +4,7 @@
 <th>Description</th>
 <th>SKU_ID</th>
 <th>Price</th>
+<th>Image</th>
 </tr>
 <% @products.each do |product| %>
 <tr>
@@ -11,6 +12,7 @@
 <td><%= product.description %></td>
 <td><%= product.sku_id %></td>
 <td><%= product.price %></td>
+<td><img src=<%= product.images[0][:img_path] %>></td>
 </tr>
 <% end %>
 </table>

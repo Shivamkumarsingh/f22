@@ -3,6 +3,26 @@
 	<%= product.label :name %><br />
 	<%=product.text_field :name, autofocus: true %>
 	</div>
+	<div class="field">
+	<%= product.label :expire_date %><br />
+	<%=product.date_field :name, autofocus: true %>
+	</div>
+	<div class="field">
+	<%= product.label :sku_id %><br />
+	<%=product.text_field :sku_id, autofocus: true %>
+	</div>
+	<div class="field">
+	<%= product.label :price %><br />
+	<%=product.number_field :name, autofocus: true %>
+	</div>
+	<div class="field">
+	<%= product.label :description %><br />
+	<%=product.text_field :name, autofocus: true %>
+	</div>
+	<div class="field">
+	<%= product.label :tags %><br />
+	<%=product.text_field :name, autofocus: true %>
+	</div>
 	<div class="action">
 	<%= product.submit "Update"%>
 	</div>

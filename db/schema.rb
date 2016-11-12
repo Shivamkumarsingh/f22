@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111055017) do
+ActiveRecord::Schema.define(version: 20161111045904) do
 
   create_table "products", force: :cascade do |t|
     t.date     "expire_date"
@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(version: 20161111055017) do
     t.string   "sku_id"
     t.integer  "price"
     t.string   "description"
+    t.text     "tags"
+    t.text     "categories"
+    t.text     "images"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "tags"
   end
 
 end
