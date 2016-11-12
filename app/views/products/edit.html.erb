@@ -5,7 +5,7 @@
 	</div>
 	<div class="field">
 	<%= product.label :expire_date %><br />
-	<%=product.date_field :name, autofocus: true %>
+	<%=product.date_field :expire_date, autofocus: true %>
 	</div>
 	<div class="field">
 	<%= product.label :sku_id %><br />
@@ -13,15 +13,15 @@
 	</div>
 	<div class="field">
 	<%= product.label :price %><br />
-	<%=product.number_field :name, autofocus: true %>
+	<%=product.number_field :price, autofocus: true %>
 	</div>
 	<div class="field">
 	<%= product.label :description %><br />
-	<%=product.text_field :name, autofocus: true %>
+	<%=product.text_field :description, autofocus: true %>
 	</div>
 	<div class="field">
 	<%= product.label :tags %><br />
-	<%=product.text_field :name, autofocus: true %>
+	<%=product.text_field :tags, autofocus: true %>
 	</div>
 	<div class="action">
 	<%= product.submit "Update"%>

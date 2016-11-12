@@ -17,6 +17,6 @@ class ProductsController < ApplicationController
 	
 	private
 	def product_param
-		params.require(:product).permit(:expire_date, :name, :sku_id, :tags, :price, :description)
+		params.require(:product).permit(:expire_date,:name,:sku_id,:price,:description,tags:[])
 	end
 end
