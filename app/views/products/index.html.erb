@@ -1,18 +1,22 @@
-<table>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>SKU_ID</th>
-<th>Price</th>
-<th>Image</th>
-</tr>
+
+<div class="container">
+<div class="row">
+<strong><div class="col-md-2">Name</div></strong>
+<strong><div class="col-md-3">Description</div></strong>
+<strong><div class="col-md-2">SKU_ID</div></strong>
+<strong><div class="col-md-2">Price</div></strong>
+<strong><div class="col-md-3">Image</div></strong>
+</div>
+<div class="row">
 <% @products.each do |product| %>
-<tr>
-<td><%= link_to product.name,product_path(product) %></td>
-<td><%= product.description %></td>
-<td><%= product.sku_id %></td>
-<td><%= product.price %></td>
-<td><img src=<%= product.images[0][:img_path] %>></td>
-</tr>
+<div class="block thumbnail">
+<div class="col-md-2"><%= link_to product.name,product_path(product) %></div>
+<div class="col-md-3"><%= product.description %></div>
+<div class="col-md-2"><%= product.sku_id %></div>
+<div class="col-md-2"><%= product.price %></div>
+<div class="col-md-3"><img class="img-thumbnail f-img" src=<%= product.images[0][:img_path] %>></div>
+</div>
 <% end %>
-</table>
+</div>
+</div>
+<%= will_paginate @products %>

@@ -1,5 +1,6 @@
 class Api::V1::ProductsController < ApplicationController
 	
+	http_basic_authenticate_with :name => "shivam", :password => "shivam"
 	def create
 		@product=Product.new(product_params)
 		respond_to do |format|
